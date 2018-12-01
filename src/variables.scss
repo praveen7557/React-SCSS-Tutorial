@@ -1,0 +1,28 @@
+$theme: dark; // normal
+$primary: #25bfe2;
+$success: #35e66b;
+$error: #ff5858;
+$first: #0062ff;
+$second: #aa4fe6;
+$third: #449922;
+$cardColors: #25bfe2,
+#35e66b,
+#ff5858,
+#0062ff,
+#aa4fe6,
+#449922;
+$fontSize: 16px;
+$borderRadius: 3px;
+$darkThemeBackgroundColor:#656565;
+$darkThemeColor:#ffffff;
+@mixin button {
+    width: 100px;
+    padding: 10px;
+    border-radius: $borderRadius;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: $fontSize;
+    display: inline-block;
+    margin-right: 10px;
+}

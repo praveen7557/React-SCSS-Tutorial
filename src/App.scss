@@ -1,0 +1,102 @@
+@import './variables.scss';
+.App {
+    text-align: left;
+    font-family: 'Montserrat';
+    padding: 15px;
+}
+
+.heading {
+    font-size: 30px;
+    text-align: center;
+}
+
+.primaryButton {
+    @include button;
+    background: $primary;
+}
+
+.successButton {
+    @include button;
+    background: $success;
+}
+
+.errorButton {
+    @include button;
+    background: $error;
+}
+
+.DIB {
+    display: inline-block;
+    margin-right: 30px;
+    width: 200px;
+}
+
+.MT30 {
+    margin-top: 30px;
+}
+
+.button {
+    width: 100px;
+    padding: 10px;
+    border-radius: $borderRadius;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: $fontSize;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.firstButton {
+    @extend .button;
+    background: $first;
+}
+
+.secondButton {
+    @extend .button;
+    background: $second;
+}
+
+.thirdButton {
+    @extend .button;
+    background: $third;
+}
+
+.myCard {
+    @extend .DIB;
+    @extend .MT30;
+    width: 300px;
+    height: 130px;
+    border-radius: $borderRadius;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    vertical-align: top;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 2px 2px #828384;
+}
+
+.cardBody {
+    margin-top: 14px;
+    line-height: 20px;
+}
+
+.cardTitle {
+    font-size: 20px;
+}
+
+@each $color in $cardColors {
+    $idx: index($cardColors, $color);
+    .card-#{$idx} {
+        background-color: $color;
+    }
+}
+
+@if $theme==dark {
+    body {
+        background: $darkThemeBackgroundColor;
+    }
+    .DIB,
+    .heading {
+        color: $darkThemeColor;
+    }
+}
